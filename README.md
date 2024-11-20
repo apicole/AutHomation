@@ -10,7 +10,7 @@ Bienvenue dans **AutHomation**, ma plateforme personnelle pour connecter et pilo
 
 L'idée principale est de **mettre les outils à mon service** afin de simplifier la gestion de ma maison connectée. Quelques exemples d'automatisations déjà mises en place :  
 - **Pré-régler le chauffage** selon les besoins.  
-- **Contrôler les volets roulants** (y compris les Vélux via une télécommande "vampirisée" - <a href="https://68600.fr/D6D/hors-sujet-domotique-de-volets-roulants-solaires-velux/" target="_blank">infi ICI</a> 😄).  
+- **Contrôler les volets roulants** (y compris les Vélux via une télécommande "vampirisée" 😄 - <a href="https://68600.fr/D6D/hors-sujet-domotique-de-volets-roulants-solaires-velux/" target="_blank">info ICI</a> ).  
 - **Automatiser la détection de présence** (via les adresses IP des appareils connectés) pour ajuster le rythme de la maison.
 
 ---
