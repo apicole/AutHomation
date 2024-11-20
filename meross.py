@@ -24,7 +24,7 @@ else:
 
 def meross_roller2(device="Volet_TV",action="open"):
     async def _action_device():
-        http_api_client = await MerossHttpClient.async_from_user_password(email='best98@free.fr', password='Merospie01', api_base_url='https://iotx-us.meross.com')
+        http_api_client = await MerossHttpClient.async_from_user_password(email='bxxxe', password='axxx1', api_base_url='https://iotx-us.meross.com')
         manager = MerossManager(http_client=http_api_client)
         await manager.async_init()
         await manager.async_device_discovery()
@@ -53,7 +53,7 @@ def meross_roller2(device="Volet_TV",action="open"):
 
 def get_blind_meros_height2(device="Volet_TV"):
     async def _action_device(future):
-        http_api_client = await MerossHttpClient.async_from_user_password(email='best98@free.fr', password='Merospie01', api_base_url='https://iotx-us.meross.com')
+        http_api_client = await MerossHttpClient.async_from_user_password(email='bxxxe', password='axxx1', api_base_url='https://iotx-us.meross.com')
         manager = MerossManager(http_client=http_api_client)
         await manager.async_init()
         await manager.async_device_discovery()
