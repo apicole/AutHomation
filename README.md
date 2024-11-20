@@ -72,7 +72,7 @@ Cependant, je réduis cette dépendance où je peux. Par exemple :
 Planifiez le lancement du script via **Cron** ou tout autre outil de gestion de tâches pour une exécution toutes les X minutes - sur un serveur chez vous, un vieux smarphone, votre box domotique ou votre PC.. tant qu'il reste allumé !
 
 Voici pour info, ma crontab :
-<pre>
+```
 # Sonos Enphase Tuya Yeelight 
 #
 */2 * * * *    /usr/bin/python3 /home/pi/xxx/config/tuya.py >> /home/pi/xxx/config/logs.log 2>&1
@@ -80,7 +80,7 @@ Voici pour info, ma crontab :
 */2 * * * *    /usr/bin/python3 /home/pi/xxx/config/myyeelight.py >> /home/pi/xxx/config/logs.log 2>&1
 */5 * * * *    /usr/bin/python3 /home/pi/xxx/config/sonos.py >> /home/pi/xxx/config/logs.log 2>&1
 */2 * * * *    /usr/bin/python3 /home/pi/xxx/config/enphase.py >> /home/pi/xxx/config/logs.log 2>&1
-</pre>
+```
 
 
 Chaque module crée ses propres logs, mais vous noterez que l'output est envoyé vers un fichier log commun, pour récupérer ce qui pourrait me manquer en cas d'erreur.
