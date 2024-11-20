@@ -72,6 +72,7 @@ Cependant, je réduis cette dépendance où je peux. Par exemple :
 Planifiez le lancement du script via **Cron** ou tout autre outil de gestion de tâches pour une exécution toutes les X minutes - sur un serveur chez vous, un vieux smarphone, votre box domotique ou votre PC.. tant qu'il reste allumé !
 
 Voici pour info, ma crontab :
+
 ```
 # Sonos Enphase Tuya Yeelight 
 #
