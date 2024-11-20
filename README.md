@@ -49,7 +49,8 @@ AutHomation centralise les connexions vers de nombreux services Cloud et équipe
 Chaque module inclut des fonctionnalités spécifiques liées à :  
 - **La météo**,  
 - **Les éphémérides**,  
-- **L'heure**,  
+- **L'heure**,
+- **État précédent**,
 - **La géolocalisation**, etc.  
 Ce qui implique la présence de nombreuses boucles d'automatisation.
 
@@ -68,15 +69,26 @@ Cependant, je réduis cette dépendance où je peux. Par exemple :
 
 ## Utilisation
 
-Planifiez le lancement du script via **Cron** ou tout autre outil de gestion de tâches pour une exécution toutes les X minutes.  
+Planifiez le lancement du script via **Cron** ou tout autre outil de gestion de tâches pour une exécution toutes les X minutes - sur un serveur chez vous, un vieux smarphone, votre box domotique ou votre PC.. tant qu'il reste allumé !
 
+Voici pour info, ma crontab :
+# Sonos Enphase Tuya  Export
+#
+*/2 * * * *    /usr/bin/python3 /home/pi/xxx/config/tuya.py >> /home/pi/xxx/config/logs.log 2>&1
+*/5 * * * *    /usr/bin/python3 /home/pi/xxx/config/crona.py >> /home/pi/xxx/config/logs.log 2>&1
+*/2 * * * *    /usr/bin/python3 /home/pi/xxx/config/myyeelight.py >> /home/pi/xxx/config/logs.log 2>&1
+*/5 * * * *    /usr/bin/python3 /home/pi/xxx/config/sonos.py >> /home/pi/xxx/config/logs.log 2>&1
+*/2 * * * *    /usr/bin/python3 /home/pi/xxx/config/enphase.py >> /home/pi/xxx/config/logs.log 2>&1
+
+Chaque module crée ses propres logs, mais vous noterez que l'output est envoyé vers un fichier log commun, pour récupérer ce qui pourrait me manquer en cas d'erreur.
 ---
 
 ## ⚠️ Attention ⚠️
 
 Le script écrit dans le fichier de configuration à chaque exécution.  
 - Si deux scripts démarrent **simultanément**, tout ira bien.  
-- Mais si deux scripts tentent de **terminer en même temps**, seul le premier à écrire pourra modifier le fichier correctement.
+- Mais si deux scripts tentent de **terminer en même temps**, seul le premier à écrire pourra modifier le fichier correctement .
+- >> - raison pour laquelles vous verrez des "sleep" en début de script 😄
 
 ---
 
