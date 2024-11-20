@@ -84,7 +84,7 @@ Voici pour info, ma crontab :
 ```
 
 
-Chaque module crée ses propres logs, mais vous noterez que l'output est envoyé vers un fichier log commun, pour récupérer ce qui pourrait me manquer en cas d'erreur.
+> Chaque module crée ses propres logs, mais vous noterez que l'output est envoyé vers un fichier log commun, pour récupérer ce qui pourrait me manquer en cas d'erreur.
 ---
 
 ## ⚠️ Attention ⚠️
@@ -92,7 +92,7 @@ Chaque module crée ses propres logs, mais vous noterez que l'output est envoyé
 Le script écrit dans le fichier de configuration à chaque exécution.  
 - Si deux scripts démarrent **simultanément**, tout ira bien.  
 - Mais si deux scripts tentent de **terminer en même temps**, seul le premier à écrire pourra modifier le fichier correctement .
-- >> - raison pour laquelles vous verrez des "sleep" en début de script 😄
+- > raison pour laquelles vous verrez des "sleep" en début de script 😄
 
 ---
 
